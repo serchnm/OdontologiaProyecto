@@ -14,9 +14,9 @@ using MaterialSkin.Controls;
 
 namespace odontologia
 {
-    public partial class Form1 : MaterialForm
+    public partial class Form2 : MaterialForm
     {
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
 
@@ -31,28 +31,12 @@ namespace odontologia
                 Primary.Green800, Accent.LightBlue200,
                 TextShade.WHITE
             );
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
         }
 
-        private void materialSingleLineTextField1_Click(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
-            noalumno.Clear();
-        }
 
-        private void materialSingleLineTextField2_Click(object sender, EventArgs e)
-        {
-            contrasena.Clear();
-        }
-
-        private void materialFlatButton1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form2 principal = new Form2();
-            principal.Show();
         }
     }
 }

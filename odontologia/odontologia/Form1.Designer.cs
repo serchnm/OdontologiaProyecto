@@ -29,28 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.inicioboton = new MaterialSkin.Controls.MaterialFlatButton();
             this.noalumno = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.contrasena = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // materialFlatButton1
+            // inicioboton
             // 
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Icon = null;
-            this.materialFlatButton1.Location = new System.Drawing.Point(293, 358);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(69, 36);
-            this.materialFlatButton1.TabIndex = 0;
-            this.materialFlatButton1.Text = "Iniciar";
-            this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.inicioboton.AutoSize = true;
+            this.inicioboton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.inicioboton.BackColor = System.Drawing.Color.White;
+            this.inicioboton.Depth = 0;
+            this.inicioboton.Icon = null;
+            this.inicioboton.Location = new System.Drawing.Point(293, 358);
+            this.inicioboton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.inicioboton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.inicioboton.Name = "inicioboton";
+            this.inicioboton.Primary = false;
+            this.inicioboton.Size = new System.Drawing.Size(69, 36);
+            this.inicioboton.TabIndex = 0;
+            this.inicioboton.Text = "Iniciar";
+            this.inicioboton.UseVisualStyleBackColor = false;
+            this.inicioboton.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // noalumno
             // 
@@ -103,12 +105,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(686, 448);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.contrasena);
             this.Controls.Add(this.noalumno);
-            this.Controls.Add(this.materialFlatButton1);
+            this.Controls.Add(this.inicioboton);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -118,7 +122,7 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
+        private MaterialSkin.Controls.MaterialFlatButton inicioboton;
         private MaterialSkin.Controls.MaterialSingleLineTextField noalumno;
         private MaterialSkin.Controls.MaterialSingleLineTextField contrasena;
         private System.Windows.Forms.PictureBox pictureBox1;
