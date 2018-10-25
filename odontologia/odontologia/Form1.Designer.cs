@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.noalumno = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.contrasena = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialFlatButton1
@@ -39,7 +42,7 @@
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
             this.materialFlatButton1.Icon = null;
-            this.materialFlatButton1.Location = new System.Drawing.Point(288, 270);
+            this.materialFlatButton1.Location = new System.Drawing.Point(293, 358);
             this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
@@ -49,52 +52,65 @@
             this.materialFlatButton1.Text = "Iniciar";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
             // 
-            // materialSingleLineTextField1
+            // noalumno
             // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(236, 176);
-            this.materialSingleLineTextField1.MaxLength = 32767;
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(183, 23);
-            this.materialSingleLineTextField1.TabIndex = 1;
-            this.materialSingleLineTextField1.TabStop = false;
-            this.materialSingleLineTextField1.Text = "No.Alumno";
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.noalumno.Depth = 0;
+            this.noalumno.Hint = "";
+            this.noalumno.Location = new System.Drawing.Point(236, 273);
+            this.noalumno.MaxLength = 32767;
+            this.noalumno.MouseState = MaterialSkin.MouseState.HOVER;
+            this.noalumno.Name = "noalumno";
+            this.noalumno.PasswordChar = '\0';
+            this.noalumno.SelectedText = "";
+            this.noalumno.SelectionLength = 0;
+            this.noalumno.SelectionStart = 0;
+            this.noalumno.Size = new System.Drawing.Size(183, 23);
+            this.noalumno.TabIndex = 1;
+            this.noalumno.TabStop = false;
+            this.noalumno.Text = "No.Alumno";
+            this.noalumno.UseSystemPasswordChar = false;
+            this.noalumno.Click += new System.EventHandler(this.materialSingleLineTextField1_Click);
             // 
-            // materialSingleLineTextField2
+            // contrasena
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(236, 225);
-            this.materialSingleLineTextField2.MaxLength = 32767;
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(183, 23);
-            this.materialSingleLineTextField2.TabIndex = 2;
-            this.materialSingleLineTextField2.TabStop = false;
-            this.materialSingleLineTextField2.Text = "Contraseña";
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.contrasena.Depth = 0;
+            this.contrasena.Hint = "";
+            this.contrasena.Location = new System.Drawing.Point(236, 316);
+            this.contrasena.MaxLength = 32767;
+            this.contrasena.MouseState = MaterialSkin.MouseState.HOVER;
+            this.contrasena.Name = "contrasena";
+            this.contrasena.PasswordChar = '\0';
+            this.contrasena.SelectedText = "";
+            this.contrasena.SelectionLength = 0;
+            this.contrasena.SelectionStart = 0;
+            this.contrasena.Size = new System.Drawing.Size(183, 23);
+            this.contrasena.TabIndex = 2;
+            this.contrasena.TabStop = false;
+            this.contrasena.Text = "Contraseña";
+            this.contrasena.UseSystemPasswordChar = true;
+            this.contrasena.Click += new System.EventHandler(this.materialSingleLineTextField2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(262, 88);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 168);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 377);
-            this.Controls.Add(this.materialSingleLineTextField2);
-            this.Controls.Add(this.materialSingleLineTextField1);
+            this.ClientSize = new System.Drawing.Size(686, 448);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.contrasena);
+            this.Controls.Add(this.noalumno);
             this.Controls.Add(this.materialFlatButton1);
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,8 +119,9 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField noalumno;
+        private MaterialSkin.Controls.MaterialSingleLineTextField contrasena;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

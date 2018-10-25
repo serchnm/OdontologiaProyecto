@@ -37,5 +37,15 @@ namespace odontologia
         {
 
         }
+
+        private void materialSingleLineTextField1_Click(object sender, EventArgs e)
+        {
+            noalumno.Clear();
+        }
+
+        private void materialSingleLineTextField2_Click(object sender, EventArgs e)
+        {
+            contrasena.Clear();
+        }
     }
 }
