@@ -27,8 +27,8 @@ namespace odontologia
 
             // Configure color schema
             materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Blue400, Primary.Blue500,
-                Primary.Blue500, Accent.LightBlue200,
+                Primary.Green700, Primary.Green800,
+                Primary.Green800, Accent.LightBlue200,
                 TextShade.WHITE
             );
         }
