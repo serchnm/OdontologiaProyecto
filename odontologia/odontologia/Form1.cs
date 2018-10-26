@@ -23,7 +23,7 @@ namespace odontologia
             // Create a material theme manager and add the form to manage (this)
             MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+
 
             // Configure color schema
             materialSkinManager.ColorScheme = new ColorScheme(
@@ -50,9 +50,17 @@ namespace odontologia
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
+
+
             this.Hide();
             Form2 principal = new Form2();
             principal.Show();
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
