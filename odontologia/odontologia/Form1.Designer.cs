@@ -29,34 +29,32 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.inicioboton = new MaterialSkin.Controls.MaterialFlatButton();
             this.noalumno = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.contrasena = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.inicioboton = new MaterialSkin.Controls.MaterialFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox2
+            // inicioboton
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(668, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 16);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(262, 88);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 168);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.inicioboton.AutoSize = true;
+            this.inicioboton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.inicioboton.BackColor = System.Drawing.Color.Transparent;
+            this.inicioboton.Depth = 0;
+            this.inicioboton.Icon = null;
+            this.inicioboton.Location = new System.Drawing.Point(293, 358);
+            this.inicioboton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.inicioboton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.inicioboton.Name = "inicioboton";
+            this.inicioboton.Primary = true;
+            this.inicioboton.Size = new System.Drawing.Size(69, 36);
+            this.inicioboton.TabIndex = 0;
+            this.inicioboton.Text = "Iniciar";
+            this.inicioboton.UseVisualStyleBackColor = false;
+            this.inicioboton.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // noalumno
             // 
@@ -96,23 +94,25 @@
             this.contrasena.UseSystemPasswordChar = true;
             this.contrasena.Click += new System.EventHandler(this.materialSingleLineTextField2_Click);
             // 
-            // inicioboton
+            // pictureBox1
             // 
-            this.inicioboton.AutoSize = true;
-            this.inicioboton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.inicioboton.BackColor = System.Drawing.Color.Transparent;
-            this.inicioboton.Depth = 0;
-            this.inicioboton.Icon = null;
-            this.inicioboton.Location = new System.Drawing.Point(293, 358);
-            this.inicioboton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.inicioboton.MouseState = MaterialSkin.MouseState.HOVER;
-            this.inicioboton.Name = "inicioboton";
-            this.inicioboton.Primary = true;
-            this.inicioboton.Size = new System.Drawing.Size(69, 36);
-            this.inicioboton.TabIndex = 0;
-            this.inicioboton.Text = "Iniciar";
-            this.inicioboton.UseVisualStyleBackColor = false;
-            this.inicioboton.Click += new System.EventHandler(this.materialFlatButton1_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(262, 88);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 168);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(668, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 16);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Form1
             // 
@@ -130,8 +130,8 @@
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,11 +139,11 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private MaterialSkin.Controls.MaterialFlatButton inicioboton;
         private MaterialSkin.Controls.MaterialSingleLineTextField noalumno;
         private MaterialSkin.Controls.MaterialSingleLineTextField contrasena;
-        private MaterialSkin.Controls.MaterialFlatButton inicioboton;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

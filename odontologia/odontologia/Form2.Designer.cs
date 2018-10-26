@@ -40,9 +40,9 @@
             this.pictureBox2.Location = new System.Drawing.Point(668, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(15, 16);
-            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Form2
             // 
@@ -52,6 +52,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Name = "Form2";
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -60,7 +61,6 @@
         }
 
         #endregion
-
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

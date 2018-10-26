@@ -41,7 +41,7 @@ namespace odontologia
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
+            Close();
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
@@ -57,11 +57,6 @@ namespace odontologia
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
