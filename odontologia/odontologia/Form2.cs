@@ -58,5 +58,32 @@ namespace odontologia
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelModificar.Visible = true;
+            panelModificar.Location= new Point(192, 97);
+            panelModificar.Size= new Size(468, 312);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelModificar.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panelModificar.Visible = false;
+            panelconfig.Visible = true;
+            panelconfig.Location = new Point(192, 97);
+            panelconfig.Size = new Size(468, 312);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 log = new Form1();
+            log.Show();
+        }
     }
 }
