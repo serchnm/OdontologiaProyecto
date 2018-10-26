@@ -101,7 +101,7 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(-2, 339);
+            this.button4.Location = new System.Drawing.Point(54, 331);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 48);
             this.button4.TabIndex = 14;
