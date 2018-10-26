@@ -43,5 +43,20 @@ namespace odontologia
         {
             Close();
         }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void menu1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

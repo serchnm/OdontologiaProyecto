@@ -42,14 +42,14 @@
             // 
             this.inicioboton.AutoSize = true;
             this.inicioboton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.inicioboton.BackColor = System.Drawing.Color.White;
+            this.inicioboton.BackColor = System.Drawing.Color.Transparent;
             this.inicioboton.Depth = 0;
             this.inicioboton.Icon = null;
             this.inicioboton.Location = new System.Drawing.Point(293, 358);
             this.inicioboton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.inicioboton.MouseState = MaterialSkin.MouseState.HOVER;
             this.inicioboton.Name = "inicioboton";
-            this.inicioboton.Primary = false;
+            this.inicioboton.Primary = true;
             this.inicioboton.Size = new System.Drawing.Size(69, 36);
             this.inicioboton.TabIndex = 0;
             this.inicioboton.Text = "Iniciar";
