@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
+using Coneccion;
+
 
 //Material
 using MaterialSkin;
@@ -50,11 +54,30 @@ namespace odontologia
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string cmd = string.Format("select *from InicioSecion where Usuario ='{0}' and Contrasena='{1}'",noalumno.Text.Trim(),contrasena.Text.Trim());
+                DataSet ds = Conec.Ejecutar(cmd);
+                string usuario = ds.Tables[0].Rows[0]["Usuario"].ToString().Trim();
+                string contras = ds.Tables[0].Rows[0]["Contrasena"].ToString().Trim();
 
+                if (usuario == noalumno.Text.ToString() && contras == contrasena.Text.Trim())
+                {
+                    this.Hide();
+                    Form2 principal = new Form2();
+                    principal.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrecta");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Vuelva a intertarlo");
+            }
 
-            this.Hide();
-            Form2 principal = new Form2();
-            principal.Show();
+            
 
         }
 
