@@ -107,19 +107,19 @@ namespace odontologia
 
         private void contrasena_Enter(object sender, EventArgs e)
         {
-            if (noalumno.Text == "Contraseña")
+            if (contrasena.Text == "Contraseña")
             {
-                noalumno.Text = "";
-                noalumno.ForeColor = Color.Black;
+                contrasena.Text = "";
+                contrasena.ForeColor = Color.Black;
             }
         }
 
         private void contrasena_Leave(object sender, EventArgs e)
         {
-            if (noalumno.Text == "")
+            if (contrasena.Text == "")
             {
-                noalumno.Text = "Contraseña";
-                noalumno.ForeColor = Color.Silver;
+                contrasena.Text = "Contraseña";
+                contrasena.ForeColor = Color.Black;
             }
         }
     }

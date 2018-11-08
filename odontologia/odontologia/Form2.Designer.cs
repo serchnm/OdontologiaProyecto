@@ -68,6 +68,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "ELIMINAR";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -83,6 +84,7 @@
             this.button3.TabIndex = 13;
             this.button3.Text = "AGREGAR";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -150,10 +152,10 @@
             // pdfreader
             // 
             this.pdfreader.Enabled = true;
-            this.pdfreader.Location = new System.Drawing.Point(3, 24);
+            this.pdfreader.Location = new System.Drawing.Point(3, 3);
             this.pdfreader.Name = "pdfreader";
             this.pdfreader.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfreader.OcxState")));
-            this.pdfreader.Size = new System.Drawing.Size(848, 484);
+            this.pdfreader.Size = new System.Drawing.Size(848, 505);
             this.pdfreader.TabIndex = 0;
             this.pdfreader.Visible = false;
             // 

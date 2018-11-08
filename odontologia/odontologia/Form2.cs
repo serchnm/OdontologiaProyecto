@@ -42,7 +42,7 @@ namespace odontologia
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         
@@ -84,7 +84,21 @@ namespace odontologia
 
         private void button4_Click(object sender, EventArgs e)
         {
+            btnBuscar.Visible = false;
+            txtBuscar.Visible = false;
             NuevoForm(new Configuracion());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            btnBuscar.Visible = true;
+            txtBuscar.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            btnBuscar.Visible = true;
+            txtBuscar.Visible = true;
         }
     }
 }

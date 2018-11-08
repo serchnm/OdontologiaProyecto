@@ -172,6 +172,9 @@
             this.txtContra2.Text = "Nueva contraseña";
             this.txtContra2.UseSystemPasswordChar = false;
             this.txtContra2.Visible = false;
+            this.txtContra2.Click += new System.EventHandler(this.txtContra2_Click);
+            this.txtContra2.Enter += new System.EventHandler(this.txtContra2_Enter);
+            this.txtContra2.Leave += new System.EventHandler(this.txtContra2_Leave);
             // 
             // txtCinfirmarContra
             // 
@@ -192,6 +195,8 @@
             this.txtCinfirmarContra.Text = "Confirmar contraseña";
             this.txtCinfirmarContra.UseSystemPasswordChar = false;
             this.txtCinfirmarContra.Visible = false;
+            this.txtCinfirmarContra.Enter += new System.EventHandler(this.txtCinfirmarContra_Enter);
+            this.txtCinfirmarContra.Leave += new System.EventHandler(this.txtCinfirmarContra_Leave);
             // 
             // btnAceotarNueContra
             // 
