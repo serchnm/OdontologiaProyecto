@@ -34,6 +34,8 @@
             this.contrasena = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +61,7 @@
             // noalumno
             // 
             this.noalumno.Depth = 0;
+            this.noalumno.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.noalumno.Hint = "";
             this.noalumno.Location = new System.Drawing.Point(236, 275);
             this.noalumno.MaxLength = 32767;
@@ -71,9 +74,11 @@
             this.noalumno.Size = new System.Drawing.Size(183, 23);
             this.noalumno.TabIndex = 1;
             this.noalumno.TabStop = false;
-            this.noalumno.Text = "No.Alumno";
+            this.noalumno.Text = "Numero de acceso ";
             this.noalumno.UseSystemPasswordChar = false;
             this.noalumno.Click += new System.EventHandler(this.materialSingleLineTextField1_Click);
+            this.noalumno.Enter += new System.EventHandler(this.noalumno_Enter);
+            this.noalumno.Leave += new System.EventHandler(this.noalumno_Leave);
             // 
             // contrasena
             // 
@@ -93,6 +98,8 @@
             this.contrasena.Text = "Contraseña";
             this.contrasena.UseSystemPasswordChar = true;
             this.contrasena.Click += new System.EventHandler(this.materialSingleLineTextField2_Click);
+            this.contrasena.Enter += new System.EventHandler(this.contrasena_Enter);
+            this.contrasena.Leave += new System.EventHandler(this.contrasena_Leave);
             // 
             // pictureBox1
             // 
@@ -114,13 +121,44 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(206, 35);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(283, 19);
+            this.materialLabel1.TabIndex = 5;
+            this.materialLabel1.Text = "Universidad Autonoma de Baja California";
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(269, 66);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(111, 19);
+            this.materialLabel2.TabIndex = 6;
+            this.materialLabel2.Text = "Incio de secion";
+            // 
             // Form1
             // 
+            this.AcceptButton = this.inicioboton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(686, 448);
             this.ControlBox = false;
+            this.Controls.Add(this.materialLabel2);
+            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.contrasena);
@@ -144,6 +182,8 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField contrasena;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
     }
 }
 

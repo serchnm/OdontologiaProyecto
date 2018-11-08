@@ -18,6 +18,7 @@ using MaterialSkin.Controls;
 
 namespace odontologia
 {
+    // Ventana de login 
     public partial class Form1 : MaterialForm
     {
         public Form1()
@@ -45,6 +46,7 @@ namespace odontologia
         private void materialSingleLineTextField1_Click(object sender, EventArgs e)
         {
             noalumno.Clear();
+
         }
 
         private void materialSingleLineTextField2_Click(object sender, EventArgs e)
@@ -64,17 +66,16 @@ namespace odontologia
                 if (usuario == noalumno.Text.ToString() && contras == contrasena.Text.Trim())
                 {
                     this.Hide();
-                    Form2 principal = new Form2();
+                    MenuPrincipal principal = new MenuPrincipal();
                     principal.Show();
                 }
-                else
-                {
-                    MessageBox.Show("Usuario o contraseña incorrecta");
-                }
+                
             }
             catch
             {
-                MessageBox.Show("Vuelva a intertarlo");
+                MessageBox.Show("Usuario o contraseña incorrecta");
+                noalumno.Clear();
+                contrasena.Clear();
             }
 
             
@@ -83,7 +84,43 @@ namespace odontologia
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
+        }
+
+        private void noalumno_Enter(object sender, EventArgs e)
+        {
+            if(noalumno.Text=="Numero de acceso")
+            {
+                noalumno.Text = "";
+                noalumno.ForeColor = Color.Black;
+            }
+        }
+
+        private void noalumno_Leave(object sender, EventArgs e)
+        {
+            if (noalumno.Text == "")
+            {
+                noalumno.Text = "Numero de Acceso";
+                noalumno.ForeColor = Color.Silver;
+            }
+        }
+
+        private void contrasena_Enter(object sender, EventArgs e)
+        {
+            if (noalumno.Text == "Contraseña")
+            {
+                noalumno.Text = "";
+                noalumno.ForeColor = Color.Black;
+            }
+        }
+
+        private void contrasena_Leave(object sender, EventArgs e)
+        {
+            if (noalumno.Text == "")
+            {
+                noalumno.Text = "Contraseña";
+                noalumno.ForeColor = Color.Silver;
+            }
         }
     }
 }
