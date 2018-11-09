@@ -29,78 +29,73 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnConfiguracion = new System.Windows.Forms.Button();
             this.lblMprincipal = new MaterialSkin.Controls.MaterialLabel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.pdfreader = new AxAcroPDFLib.AxAcroPDF();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAgregarAlum = new System.Windows.Forms.Button();
+            this.btnAgregarProfe = new System.Windows.Forms.Button();
+            this.ImgHome = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pdfreader)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox2
+            // btnEliminar
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1025, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 16);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(0, 114);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(197, 55);
+            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button2
+            // btnAgregar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(-2, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 48);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "ELIMINAR";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(0, 175);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(197, 55);
+            this.btnAgregar.TabIndex = 13;
+            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button3
+            // btnConfiguracion
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(-2, 172);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 48);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "AGREGAR";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(-2, 226);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 48);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "CONFIGURACION";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnConfiguracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnConfiguracion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnConfiguracion.FlatAppearance.BorderSize = 0;
+            this.btnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracion.Location = new System.Drawing.Point(0, 358);
+            this.btnConfiguracion.Name = "btnConfiguracion";
+            this.btnConfiguracion.Size = new System.Drawing.Size(197, 55);
+            this.btnConfiguracion.TabIndex = 14;
+            this.btnConfiguracion.Text = "CONFIGURACION";
+            this.btnConfiguracion.UseVisualStyleBackColor = false;
+            this.btnConfiguracion.Click += new System.EventHandler(this.button4_Click);
             // 
             // lblMprincipal
             // 
@@ -109,7 +104,7 @@
             this.lblMprincipal.Depth = 0;
             this.lblMprincipal.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMprincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblMprincipal.Location = new System.Drawing.Point(495, 31);
+            this.lblMprincipal.Location = new System.Drawing.Point(569, 31);
             this.lblMprincipal.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblMprincipal.Name = "lblMprincipal";
             this.lblMprincipal.Size = new System.Drawing.Size(129, 25);
@@ -128,9 +123,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.pdfreader);
-            this.panel1.Location = new System.Drawing.Point(174, 118);
+            this.panel1.Location = new System.Drawing.Point(265, 138);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(851, 508);
+            this.panel1.Size = new System.Drawing.Size(914, 527);
             this.panel1.TabIndex = 19;
             // 
             // btnBuscar
@@ -152,35 +147,103 @@
             // pdfreader
             // 
             this.pdfreader.Enabled = true;
-            this.pdfreader.Location = new System.Drawing.Point(3, 3);
+            this.pdfreader.Location = new System.Drawing.Point(3, 0);
             this.pdfreader.Name = "pdfreader";
             this.pdfreader.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfreader.OcxState")));
-            this.pdfreader.Size = new System.Drawing.Size(848, 505);
+            this.pdfreader.Size = new System.Drawing.Size(908, 524);
             this.pdfreader.TabIndex = 0;
             this.pdfreader.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.ImgHome);
+            this.panel2.Controls.Add(this.btnAgregarProfe);
+            this.panel2.Controls.Add(this.btnAgregarAlum);
+            this.panel2.Controls.Add(this.btnConfiguracion);
+            this.panel2.Controls.Add(this.btnAgregar);
+            this.panel2.Controls.Add(this.btnEliminar);
+            this.panel2.Location = new System.Drawing.Point(1, 64);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 629);
+            this.panel2.TabIndex = 20;
+            // 
+            // btnAgregarAlum
+            // 
+            this.btnAgregarAlum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnAgregarAlum.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAgregarAlum.FlatAppearance.BorderSize = 0;
+            this.btnAgregarAlum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnAgregarAlum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarAlum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarAlum.Location = new System.Drawing.Point(0, 236);
+            this.btnAgregarAlum.Name = "btnAgregarAlum";
+            this.btnAgregarAlum.Size = new System.Drawing.Size(197, 55);
+            this.btnAgregarAlum.TabIndex = 15;
+            this.btnAgregarAlum.Text = "AGREGAR ALUMNO";
+            this.btnAgregarAlum.UseVisualStyleBackColor = false;
+            this.btnAgregarAlum.Click += new System.EventHandler(this.btnAgregarAlum_Click);
+            // 
+            // btnAgregarProfe
+            // 
+            this.btnAgregarProfe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnAgregarProfe.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAgregarProfe.FlatAppearance.BorderSize = 0;
+            this.btnAgregarProfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnAgregarProfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarProfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProfe.Location = new System.Drawing.Point(0, 297);
+            this.btnAgregarProfe.Name = "btnAgregarProfe";
+            this.btnAgregarProfe.Size = new System.Drawing.Size(197, 55);
+            this.btnAgregarProfe.TabIndex = 16;
+            this.btnAgregarProfe.Text = "AGREGAR PROFESOR";
+            this.btnAgregarProfe.UseVisualStyleBackColor = false;
+            this.btnAgregarProfe.Click += new System.EventHandler(this.btnAgregarProfe_Click);
+            // 
+            // ImgHome
+            // 
+            this.ImgHome.Image = global::odontologia.Properties.Resources.UABC_escudo;
+            this.ImgHome.Location = new System.Drawing.Point(0, 3);
+            this.ImgHome.Name = "ImgHome";
+            this.ImgHome.Size = new System.Drawing.Size(197, 113);
+            this.ImgHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgHome.TabIndex = 17;
+            this.ImgHome.TabStop = false;
+            this.ImgHome.Click += new System.EventHandler(this.ImgHome_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1178, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 22);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1062, 638);
+            this.ClientSize = new System.Drawing.Size(1215, 690);
             this.ControlBox = false;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblMprincipal);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox2);
             this.Name = "MenuPrincipal";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pdfreader)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImgHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,13 +251,17 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnConfiguracion;
         private MaterialSkin.Controls.MaterialLabel lblMprincipal;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnBuscar;
         private AxAcroPDFLib.AxAcroPDF pdfreader;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox ImgHome;
+        private System.Windows.Forms.Button btnAgregarProfe;
+        private System.Windows.Forms.Button btnAgregarAlum;
     }
 }

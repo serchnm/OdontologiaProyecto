@@ -122,5 +122,10 @@ namespace odontologia
                 contrasena.ForeColor = Color.Black;
             }
         }
+
+        private void noalumno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
     }
 }

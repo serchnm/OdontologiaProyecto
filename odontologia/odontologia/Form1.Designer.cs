@@ -78,6 +78,7 @@
             this.noalumno.UseSystemPasswordChar = false;
             this.noalumno.Click += new System.EventHandler(this.materialSingleLineTextField1_Click);
             this.noalumno.Enter += new System.EventHandler(this.noalumno_Enter);
+            this.noalumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.noalumno_KeyPress);
             this.noalumno.Leave += new System.EventHandler(this.noalumno_Leave);
             // 
             // contrasena

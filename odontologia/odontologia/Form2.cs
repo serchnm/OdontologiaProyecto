@@ -81,24 +81,53 @@ namespace odontologia
             NForm.Show();
 
         }
-
+        //Boton Configuracion
         private void button4_Click(object sender, EventArgs e)
         {
+            lblMprincipal.Text = "Configuracion";
             btnBuscar.Visible = false;
             txtBuscar.Visible = false;
             NuevoForm(new Configuracion());
         }
-
+        //Boton agregar
         private void button3_Click(object sender, EventArgs e)
         {
+            lblMprincipal.Text = "Agregar Archivo";
             btnBuscar.Visible = true;
             txtBuscar.Visible = true;
         }
-
+        //Boton eliminar
         private void button2_Click(object sender, EventArgs e)
         {
+            lblMprincipal.Text = "Eliminar Archivo";
             btnBuscar.Visible = true;
             txtBuscar.Visible = true;
+        }
+        //Imagen de inicio
+        private void ImgHome_Click(object sender, EventArgs e)
+        {
+            
+            btnBuscar.Visible = false;
+            txtBuscar.Visible = false;
+            NuevoForm(new Home());
+            lblMprincipal.Text = "UABC";
+            
+        }
+        //Boton agregar profesor
+        private void btnAgregarProfe_Click(object sender, EventArgs e)
+        {
+            lblMprincipal.Text = "Agregar Profesor";
+            btnBuscar.Visible = false;
+            txtBuscar.Visible = false;
+            NuevoForm(new AgregarProfesor());
+        }
+
+        private void btnAgregarAlum_Click(object sender, EventArgs e)
+        {
+            lblMprincipal.Text = "Agregar Alumno";
+            btnBuscar.Visible = false;
+            txtBuscar.Visible = false;
+            NuevoForm(new AgregarAlumno());
         }
     }
 }
