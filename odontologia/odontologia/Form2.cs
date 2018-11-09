@@ -77,6 +77,7 @@ namespace odontologia
             panelconfig.Visible = true;
             panelconfig.Location = new Point(192, 97);
             panelconfig.Size = new Size(468, 312);
+            
         }
 
         private void button6_Click(object sender, EventArgs e)

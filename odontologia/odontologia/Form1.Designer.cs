@@ -141,9 +141,9 @@
 
         private MaterialSkin.Controls.MaterialFlatButton inicioboton;
         private MaterialSkin.Controls.MaterialSingleLineTextField noalumno;
-        private MaterialSkin.Controls.MaterialSingleLineTextField contrasena;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField contrasena;
     }
 }
 
