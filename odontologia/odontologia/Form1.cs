@@ -41,7 +41,7 @@ namespace odontologia
         private void materialSingleLineTextField1_Click(object sender, EventArgs e)
         {
             noalumno.Clear();
-            noalumno.
+            
         }
 
         private void materialSingleLineTextField2_Click(object sender, EventArgs e)
