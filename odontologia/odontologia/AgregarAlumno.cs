@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Coneccion;
+using Class2;
 
 namespace odontologia
 {
