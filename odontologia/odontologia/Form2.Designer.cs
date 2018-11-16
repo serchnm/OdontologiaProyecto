@@ -32,17 +32,17 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnConfiguracion = new System.Windows.Forms.Button();
-            this.lblMprincipal = new MaterialSkin.Controls.MaterialLabel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pdfreader = new AxAcroPDFLib.AxAcroPDF();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCloseSecion = new System.Windows.Forms.Button();
             this.ImgHome = new System.Windows.Forms.PictureBox();
             this.btnAgregarProfe = new System.Windows.Forms.Button();
             this.btnAgregarAlum = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnCloseSecion = new System.Windows.Forms.Button();
+            this.lblMprincipal = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pdfreader)).BeginInit();
             this.panel2.SuspendLayout();
@@ -94,23 +94,9 @@
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(197, 55);
             this.btnConfiguracion.TabIndex = 14;
-            this.btnConfiguracion.Text = "CONFIGURACION";
+            this.btnConfiguracion.Text = "CONFIGURACIÓN";
             this.btnConfiguracion.UseVisualStyleBackColor = false;
             this.btnConfiguracion.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // lblMprincipal
-            // 
-            this.lblMprincipal.AutoSize = true;
-            this.lblMprincipal.BackColor = System.Drawing.Color.Transparent;
-            this.lblMprincipal.Depth = 0;
-            this.lblMprincipal.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblMprincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblMprincipal.Location = new System.Drawing.Point(569, 31);
-            this.lblMprincipal.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblMprincipal.Name = "lblMprincipal";
-            this.lblMprincipal.Size = new System.Drawing.Size(107, 19);
-            this.lblMprincipal.TabIndex = 15;
-            this.lblMprincipal.Text = "Menu principal";
             // 
             // txtBuscar
             // 
@@ -170,6 +156,22 @@
             this.panel2.Size = new System.Drawing.Size(200, 629);
             this.panel2.TabIndex = 20;
             // 
+            // btnCloseSecion
+            // 
+            this.btnCloseSecion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnCloseSecion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCloseSecion.FlatAppearance.BorderSize = 0;
+            this.btnCloseSecion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCloseSecion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseSecion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseSecion.Location = new System.Drawing.Point(0, 122);
+            this.btnCloseSecion.Name = "btnCloseSecion";
+            this.btnCloseSecion.Size = new System.Drawing.Size(197, 55);
+            this.btnCloseSecion.TabIndex = 18;
+            this.btnCloseSecion.Text = "CERRAR SECIÓN";
+            this.btnCloseSecion.UseVisualStyleBackColor = false;
+            this.btnCloseSecion.Click += new System.EventHandler(this.btnCloseSecion_Click);
+            // 
             // ImgHome
             // 
             this.ImgHome.Image = global::odontologia.Properties.Resources.UABC_escudo;
@@ -224,21 +226,17 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // btnCloseSecion
+            // lblMprincipal
             // 
-            this.btnCloseSecion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnCloseSecion.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCloseSecion.FlatAppearance.BorderSize = 0;
-            this.btnCloseSecion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnCloseSecion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseSecion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCloseSecion.Location = new System.Drawing.Point(0, 122);
-            this.btnCloseSecion.Name = "btnCloseSecion";
-            this.btnCloseSecion.Size = new System.Drawing.Size(197, 55);
-            this.btnCloseSecion.TabIndex = 18;
-            this.btnCloseSecion.Text = "CERRAR SECIÓN";
-            this.btnCloseSecion.UseVisualStyleBackColor = false;
-            this.btnCloseSecion.Click += new System.EventHandler(this.btnCloseSecion_Click);
+            this.lblMprincipal.AutoSize = true;
+            this.lblMprincipal.BackColor = System.Drawing.Color.Transparent;
+            this.lblMprincipal.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMprincipal.ForeColor = System.Drawing.Color.White;
+            this.lblMprincipal.Location = new System.Drawing.Point(591, 31);
+            this.lblMprincipal.Name = "lblMprincipal";
+            this.lblMprincipal.Size = new System.Drawing.Size(57, 24);
+            this.lblMprincipal.TabIndex = 21;
+            this.lblMprincipal.Text = "Menú";
             // 
             // MenuPrincipal
             // 
@@ -247,11 +245,11 @@
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1215, 690);
             this.ControlBox = false;
+            this.Controls.Add(this.lblMprincipal);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.lblMprincipal);
             this.Controls.Add(this.pictureBox2);
             this.Name = "MenuPrincipal";
             this.Sizable = false;
@@ -269,7 +267,6 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox2;
-        private MaterialSkin.Controls.MaterialLabel lblMprincipal;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnBuscar;
@@ -282,5 +279,6 @@
         public System.Windows.Forms.Button btnAgregarProfe;
         public System.Windows.Forms.Button btnAgregarAlum;
         public System.Windows.Forms.Button btnCloseSecion;
+        private System.Windows.Forms.Label lblMprincipal;
     }
 }
