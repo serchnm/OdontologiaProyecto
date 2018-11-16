@@ -64,6 +64,7 @@
     <Compile Include="AgregarProfesor.Designer.cs">
       <DependentUpon>AgregarProfesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="Eliminar.cs">
       <SubType>Form</SubType>
     </Compile>

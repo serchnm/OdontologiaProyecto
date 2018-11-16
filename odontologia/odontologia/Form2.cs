@@ -17,6 +17,7 @@ namespace odontologia
 {
     public partial class MenuPrincipal : MaterialForm
     {
+        Conec c = new Conec();
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -120,6 +121,8 @@ namespace odontologia
             btnBuscar.Visible = false;
             txtBuscar.Visible = false;
             NuevoForm(new AgregarProfesor());
+            
+
         }
 
         private void btnAgregarAlum_Click(object sender, EventArgs e)
@@ -128,6 +131,14 @@ namespace odontologia
             btnBuscar.Visible = false;
             txtBuscar.Visible = false;
             NuevoForm(new AgregarAlumno());
+            //NuevoForm(new MenuPrincipal());
+        }
+
+        private void btnCloseSecion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 log = new Form1();
+            log.Show();
         }
     }
 }

@@ -102,15 +102,17 @@
             this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
-            this.txtNombre.SelectedText = "";
-            this.txtNombre.SelectionLength = 0;
+            this.txtNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtNombre.SelectedText = "Nombre";
+            this.txtNombre.SelectionLength = 6;
             this.txtNombre.SelectionStart = 0;
-            this.txtNombre.Size = new System.Drawing.Size(239, 23);
+            this.txtNombre.Size = new System.Drawing.Size(238, 23);
             this.txtNombre.TabIndex = 4;
             this.txtNombre.TabStop = false;
             this.txtNombre.Text = "Nombre";
             this.txtNombre.UseSystemPasswordChar = false;
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // txtApPat
@@ -122,8 +124,8 @@
             this.txtApPat.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtApPat.Name = "txtApPat";
             this.txtApPat.PasswordChar = '\0';
-            this.txtApPat.SelectedText = "";
-            this.txtApPat.SelectionLength = 0;
+            this.txtApPat.SelectedText = "Apellido Paterno";
+            this.txtApPat.SelectionLength = 16;
             this.txtApPat.SelectionStart = 0;
             this.txtApPat.Size = new System.Drawing.Size(239, 23);
             this.txtApPat.TabIndex = 5;
@@ -131,6 +133,7 @@
             this.txtApPat.Text = "Apellido Paterno";
             this.txtApPat.UseSystemPasswordChar = false;
             this.txtApPat.Enter += new System.EventHandler(this.txtApPat_Enter);
+            this.txtApPat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApPat_KeyPress);
             this.txtApPat.Leave += new System.EventHandler(this.txtApPat_Leave);
             // 
             // txtApMat
@@ -142,8 +145,8 @@
             this.txtApMat.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtApMat.Name = "txtApMat";
             this.txtApMat.PasswordChar = '\0';
-            this.txtApMat.SelectedText = "";
-            this.txtApMat.SelectionLength = 0;
+            this.txtApMat.SelectedText = "Apellido Materno";
+            this.txtApMat.SelectionLength = 16;
             this.txtApMat.SelectionStart = 0;
             this.txtApMat.Size = new System.Drawing.Size(239, 23);
             this.txtApMat.TabIndex = 6;
@@ -151,6 +154,7 @@
             this.txtApMat.Text = "Apellido Materno";
             this.txtApMat.UseSystemPasswordChar = false;
             this.txtApMat.Enter += new System.EventHandler(this.txtApMat_Enter);
+            this.txtApMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApMat_KeyPress);
             this.txtApMat.Leave += new System.EventHandler(this.txtApMat_Leave);
             // 
             // txtNumAcceso
@@ -171,6 +175,7 @@
             this.txtNumAcceso.Text = "Numero de Control";
             this.txtNumAcceso.UseSystemPasswordChar = false;
             this.txtNumAcceso.Enter += new System.EventHandler(this.txtNumAcceso_Enter);
+            this.txtNumAcceso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumAcceso_KeyPress);
             this.txtNumAcceso.Leave += new System.EventHandler(this.txtNumAcceso_Leave);
             // 
             // btnAceptar

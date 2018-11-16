@@ -36,6 +36,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -129,7 +130,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(206, 35);
+            this.materialLabel1.Location = new System.Drawing.Point(97, 35);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(283, 19);
@@ -150,6 +151,16 @@
             this.materialLabel2.TabIndex = 6;
             this.materialLabel2.Text = "Incio de secion";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(484, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Universidad Autonoma de Baja California";
+            // 
             // Form1
             // 
             this.AcceptButton = this.inicioboton;
@@ -158,6 +169,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(686, 448);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.pictureBox2);
@@ -179,12 +191,13 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialFlatButton inicioboton;
-        private MaterialSkin.Controls.MaterialSingleLineTextField noalumno;
-        private MaterialSkin.Controls.MaterialSingleLineTextField contrasena;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private System.Windows.Forms.Label label1;
+        public MaterialSkin.Controls.MaterialSingleLineTextField noalumno;
+        public MaterialSkin.Controls.MaterialSingleLineTextField contrasena;
     }
 }
 

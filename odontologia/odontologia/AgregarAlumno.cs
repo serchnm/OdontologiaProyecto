@@ -13,11 +13,12 @@ namespace odontologia
 {
     public partial class AgregarAlumno : Form
     {
+        Conec co = new Conec();
         public AgregarAlumno()
         {
             InitializeComponent();
         }
-
+        
         private void txtNombre_Leave(object sender, EventArgs e)
         {
             if (txtNombre.Text == "")
@@ -25,6 +26,7 @@ namespace odontologia
                 txtNombre.Text = "nombre";
                 txtNombre.ForeColor = Color.Silver;
             }
+            
         }
 
         private void txtNombre_Enter(object sender, EventArgs e)
@@ -92,13 +94,19 @@ namespace odontologia
         // Realizar bien la insercion
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            
+           MessageBox.Show( co.insertarAlumno(Convert.ToInt32(txtNumAcceso.Text),txtNombre.Text,txtApPat.Text,txtApMat.Text,Convert.ToInt32(txtPerrniso.Text),Convert.ToInt32(txtCarrera.Text)));
+            txtNumAcceso.Text = "";
+            txtNombre.Text = "";
+            txtApPat.Text = "";
+            txtApMat.Text = "";
+           
+
             //try
             //{
-                //string cmd = string.Format("Insert into Alumno values  where IdAlumno ='{0}' and Contrasena='{1}'", noalumno.Text.Trim(), contrasena.Text.Trim());
-               string cmd=string.Format ("insert into Alumno (IdAlumno,Nombre,ApPat,ApMat,IdPermiso,IdCarrera) values(" + txtNumAcceso.Text + ",'" + txtNombre.Text + "','" + txtApPat.Text + "','" + txtApMat.Text + "','"+txtPerrniso
-                   +"',3) ");
-                DataSet ds = Conec.Ejecutar(cmd);
+            //string cmd = string.Format("Insert into Alumno values  where IdAlumno ='{0}' and Contrasena='{1}'", noalumno.Text.Trim(), contrasena.Text.Trim());
+            //string cmd=string.Format ("insert into Alumno (IdAlumno,Nombre,ApPat,ApMat,IdPermiso,IdCarrera) values(" + txtNumAcceso.Text + ",'" + txtNombre.Text + "','" + txtApPat.Text + "','" + txtApMat.Text + "','"+txtPerrniso
+            //       +"',3) ");
+            //    DataSet ds = Conec.Ejecutar(cmd);
                 //string usuario = ds.Tables[0].Rows[0]["Usuario"].ToString().Trim();
                 //string contras = ds.Tables[0].Rows[0]["Contrasena"].ToString().Trim();
 
@@ -116,6 +124,26 @@ namespace odontologia
             //    noalumno.Clear();
             //    contrasena.Clear();
             //}
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
+
+        private void txtApPat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
+
+        private void txtApMat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
+
+        private void txtNumAcceso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
         }
     }
 }

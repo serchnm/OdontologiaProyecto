@@ -35,13 +35,14 @@
             this.lblMprincipal = new MaterialSkin.Controls.MaterialLabel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.pdfreader = new AxAcroPDFLib.AxAcroPDF();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAgregarAlum = new System.Windows.Forms.Button();
-            this.btnAgregarProfe = new System.Windows.Forms.Button();
             this.ImgHome = new System.Windows.Forms.PictureBox();
+            this.btnAgregarProfe = new System.Windows.Forms.Button();
+            this.btnAgregarAlum = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCloseSecion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pdfreader)).BeginInit();
             this.panel2.SuspendLayout();
@@ -54,10 +55,10 @@
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(0, 114);
+            this.btnEliminar.Location = new System.Drawing.Point(0, 244);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(197, 55);
             this.btnEliminar.TabIndex = 12;
@@ -70,10 +71,10 @@
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(0, 175);
+            this.btnAgregar.Location = new System.Drawing.Point(0, 305);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(197, 55);
             this.btnAgregar.TabIndex = 13;
@@ -86,10 +87,10 @@
             this.btnConfiguracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnConfiguracion.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnConfiguracion.FlatAppearance.BorderSize = 0;
-            this.btnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguracion.Location = new System.Drawing.Point(0, 358);
+            this.btnConfiguracion.Location = new System.Drawing.Point(0, 183);
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(197, 55);
             this.btnConfiguracion.TabIndex = 14;
@@ -102,12 +103,12 @@
             this.lblMprincipal.AutoSize = true;
             this.lblMprincipal.BackColor = System.Drawing.Color.Transparent;
             this.lblMprincipal.Depth = 0;
-            this.lblMprincipal.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMprincipal.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblMprincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblMprincipal.Location = new System.Drawing.Point(569, 31);
             this.lblMprincipal.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblMprincipal.Name = "lblMprincipal";
-            this.lblMprincipal.Size = new System.Drawing.Size(129, 25);
+            this.lblMprincipal.Size = new System.Drawing.Size(107, 19);
             this.lblMprincipal.TabIndex = 15;
             this.lblMprincipal.Text = "Menu principal";
             // 
@@ -128,6 +129,16 @@
             this.panel1.Size = new System.Drawing.Size(914, 527);
             this.panel1.TabIndex = 19;
             // 
+            // pdfreader
+            // 
+            this.pdfreader.Enabled = true;
+            this.pdfreader.Location = new System.Drawing.Point(3, 3);
+            this.pdfreader.Name = "pdfreader";
+            this.pdfreader.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfreader.OcxState")));
+            this.pdfreader.Size = new System.Drawing.Size(908, 521);
+            this.pdfreader.TabIndex = 0;
+            this.pdfreader.Visible = false;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -144,19 +155,10 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // pdfreader
-            // 
-            this.pdfreader.Enabled = true;
-            this.pdfreader.Location = new System.Drawing.Point(3, 0);
-            this.pdfreader.Name = "pdfreader";
-            this.pdfreader.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfreader.OcxState")));
-            this.pdfreader.Size = new System.Drawing.Size(908, 524);
-            this.pdfreader.TabIndex = 0;
-            this.pdfreader.Visible = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.btnCloseSecion);
             this.panel2.Controls.Add(this.ImgHome);
             this.panel2.Controls.Add(this.btnAgregarProfe);
             this.panel2.Controls.Add(this.btnAgregarAlum);
@@ -167,38 +169,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 629);
             this.panel2.TabIndex = 20;
-            // 
-            // btnAgregarAlum
-            // 
-            this.btnAgregarAlum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnAgregarAlum.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAgregarAlum.FlatAppearance.BorderSize = 0;
-            this.btnAgregarAlum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
-            this.btnAgregarAlum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarAlum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarAlum.Location = new System.Drawing.Point(0, 236);
-            this.btnAgregarAlum.Name = "btnAgregarAlum";
-            this.btnAgregarAlum.Size = new System.Drawing.Size(197, 55);
-            this.btnAgregarAlum.TabIndex = 15;
-            this.btnAgregarAlum.Text = "AGREGAR ALUMNO";
-            this.btnAgregarAlum.UseVisualStyleBackColor = false;
-            this.btnAgregarAlum.Click += new System.EventHandler(this.btnAgregarAlum_Click);
-            // 
-            // btnAgregarProfe
-            // 
-            this.btnAgregarProfe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnAgregarProfe.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAgregarProfe.FlatAppearance.BorderSize = 0;
-            this.btnAgregarProfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
-            this.btnAgregarProfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarProfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProfe.Location = new System.Drawing.Point(0, 297);
-            this.btnAgregarProfe.Name = "btnAgregarProfe";
-            this.btnAgregarProfe.Size = new System.Drawing.Size(197, 55);
-            this.btnAgregarProfe.TabIndex = 16;
-            this.btnAgregarProfe.Text = "AGREGAR PROFESOR";
-            this.btnAgregarProfe.UseVisualStyleBackColor = false;
-            this.btnAgregarProfe.Click += new System.EventHandler(this.btnAgregarProfe_Click);
             // 
             // ImgHome
             // 
@@ -211,6 +181,38 @@
             this.ImgHome.TabStop = false;
             this.ImgHome.Click += new System.EventHandler(this.ImgHome_Click);
             // 
+            // btnAgregarProfe
+            // 
+            this.btnAgregarProfe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnAgregarProfe.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAgregarProfe.FlatAppearance.BorderSize = 0;
+            this.btnAgregarProfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnAgregarProfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarProfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProfe.Location = new System.Drawing.Point(0, 427);
+            this.btnAgregarProfe.Name = "btnAgregarProfe";
+            this.btnAgregarProfe.Size = new System.Drawing.Size(197, 55);
+            this.btnAgregarProfe.TabIndex = 16;
+            this.btnAgregarProfe.Text = "AGREGAR PROFESOR";
+            this.btnAgregarProfe.UseVisualStyleBackColor = false;
+            this.btnAgregarProfe.Click += new System.EventHandler(this.btnAgregarProfe_Click);
+            // 
+            // btnAgregarAlum
+            // 
+            this.btnAgregarAlum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnAgregarAlum.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAgregarAlum.FlatAppearance.BorderSize = 0;
+            this.btnAgregarAlum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnAgregarAlum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarAlum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarAlum.Location = new System.Drawing.Point(0, 366);
+            this.btnAgregarAlum.Name = "btnAgregarAlum";
+            this.btnAgregarAlum.Size = new System.Drawing.Size(197, 55);
+            this.btnAgregarAlum.TabIndex = 15;
+            this.btnAgregarAlum.Text = "AGREGAR ALUMNO";
+            this.btnAgregarAlum.UseVisualStyleBackColor = false;
+            this.btnAgregarAlum.Click += new System.EventHandler(this.btnAgregarAlum_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
@@ -221,6 +223,22 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // btnCloseSecion
+            // 
+            this.btnCloseSecion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnCloseSecion.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCloseSecion.FlatAppearance.BorderSize = 0;
+            this.btnCloseSecion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCloseSecion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseSecion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseSecion.Location = new System.Drawing.Point(0, 122);
+            this.btnCloseSecion.Name = "btnCloseSecion";
+            this.btnCloseSecion.Size = new System.Drawing.Size(197, 55);
+            this.btnCloseSecion.TabIndex = 18;
+            this.btnCloseSecion.Text = "CERRAR SECIÓN";
+            this.btnCloseSecion.UseVisualStyleBackColor = false;
+            this.btnCloseSecion.Click += new System.EventHandler(this.btnCloseSecion_Click);
             // 
             // MenuPrincipal
             // 
@@ -251,9 +269,6 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnConfiguracion;
         private MaterialSkin.Controls.MaterialLabel lblMprincipal;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Panel panel1;
@@ -261,7 +276,11 @@
         private AxAcroPDFLib.AxAcroPDF pdfreader;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox ImgHome;
-        private System.Windows.Forms.Button btnAgregarProfe;
-        private System.Windows.Forms.Button btnAgregarAlum;
+        public System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.Button btnAgregar;
+        public System.Windows.Forms.Button btnConfiguracion;
+        public System.Windows.Forms.Button btnAgregarProfe;
+        public System.Windows.Forms.Button btnAgregarAlum;
+        public System.Windows.Forms.Button btnCloseSecion;
     }
 }

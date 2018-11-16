@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNombre = new MaterialSkin.Controls.MaterialLabel();
             this.lblNumAcceso = new MaterialSkin.Controls.MaterialLabel();
             this.lblContra = new MaterialSkin.Controls.MaterialLabel();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtNumAcceso = new System.Windows.Forms.TextBox();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.btnCambioContra = new MaterialSkin.Controls.MaterialFlatButton();
@@ -41,19 +39,6 @@
             this.txtCinfirmarContra = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnAceotarNueContra = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Depth = 0;
-            this.lblNombre.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNombre.Location = new System.Drawing.Point(49, 43);
-            this.lblNombre.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(63, 19);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre";
             // 
             // lblNumAcceso
             // 
@@ -80,15 +65,6 @@
             this.lblContra.Size = new System.Drawing.Size(86, 19);
             this.lblContra.TabIndex = 4;
             this.lblContra.Text = "Contraseña";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(212, 44);
-            this.txtNombre.Multiline = true;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.ReadOnly = true;
-            this.txtNombre.Size = new System.Drawing.Size(188, 31);
-            this.txtNombre.TabIndex = 8;
             // 
             // txtNumAcceso
             // 
@@ -174,6 +150,7 @@
             this.txtContra2.Visible = false;
             this.txtContra2.Click += new System.EventHandler(this.txtContra2_Click);
             this.txtContra2.Enter += new System.EventHandler(this.txtContra2_Enter);
+            this.txtContra2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContra2_KeyPress);
             this.txtContra2.Leave += new System.EventHandler(this.txtContra2_Leave);
             // 
             // txtCinfirmarContra
@@ -196,6 +173,7 @@
             this.txtCinfirmarContra.UseSystemPasswordChar = false;
             this.txtCinfirmarContra.Visible = false;
             this.txtCinfirmarContra.Enter += new System.EventHandler(this.txtCinfirmarContra_Enter);
+            this.txtCinfirmarContra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCinfirmarContra_KeyPress);
             this.txtCinfirmarContra.Leave += new System.EventHandler(this.txtCinfirmarContra_Leave);
             // 
             // btnAceotarNueContra
@@ -214,6 +192,7 @@
             this.btnAceotarNueContra.Text = "Aceptar";
             this.btnAceotarNueContra.UseVisualStyleBackColor = true;
             this.btnAceotarNueContra.Visible = false;
+            this.btnAceotarNueContra.Click += new System.EventHandler(this.btnAceotarNueContra_Click);
             // 
             // Configuracion
             // 
@@ -229,10 +208,8 @@
             this.Controls.Add(this.btnCambioContra);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtNumAcceso);
-            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblContra);
             this.Controls.Add(this.lblNumAcceso);
-            this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -244,11 +221,8 @@
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialLabel lblNombre;
         private MaterialSkin.Controls.MaterialLabel lblNumAcceso;
         private MaterialSkin.Controls.MaterialLabel lblContra;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtNumAcceso;
         private System.Windows.Forms.TextBox txtContra;
         private MaterialSkin.Controls.MaterialFlatButton btnCambioContra;

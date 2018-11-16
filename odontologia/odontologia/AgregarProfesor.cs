@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Coneccion;
 
 namespace odontologia
 {
     public partial class AgregarProfesor : Form
     {
+        Conec co = new Conec();
         public AgregarProfesor()
         {
             InitializeComponent();
@@ -87,6 +89,35 @@ namespace odontologia
                 txtNumAcceso.Text = "Numero de Control";
                 txtNumAcceso.ForeColor = Color.Silver;
             }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
+
+        private void txtApPat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
+
+        private void txtApMat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
+
+        private void txtNumAcceso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(co.InsertarProfesor(Convert.ToInt32(txtNumAcceso.Text), txtNombre.Text, txtApPat.Text, txtApMat.Text, Convert.ToInt32(txtPersmiso.Text), Convert.ToInt32(txtCarrera.Text)));
+            txtNombre.Text = "";
+            txtNumAcceso.Text = "";
+            txtApPat.Text = "";
+            txtApMat.Text = "";
         }
     }
 }

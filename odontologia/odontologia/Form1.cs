@@ -40,7 +40,7 @@ namespace odontologia
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Conec c = new Conec();
         }
 
         private void materialSingleLineTextField1_Click(object sender, EventArgs e)
@@ -56,18 +56,43 @@ namespace odontologia
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
+            //agregar un campo mas a InicioSecion para tener el permiso para los menus
             try
             {
                 string cmd = string.Format("select *from InicioSecion where Usuario ='{0}' and Contrasena='{1}'",noalumno.Text.Trim(),contrasena.Text.Trim());
                 DataSet ds = Conec.Ejecutar(cmd);
                 string usuario = ds.Tables[0].Rows[0]["Usuario"].ToString().Trim();
                 string contras = ds.Tables[0].Rows[0]["Contrasena"].ToString().Trim();
+                string permiso = ds.Tables[0].Rows[0]["IdPermiso"].ToString().Trim();
 
                 if (usuario == noalumno.Text.ToString() && contras == contrasena.Text.Trim())
                 {
                     this.Hide();
                     MenuPrincipal principal = new MenuPrincipal();
-                    principal.Show();
+                    if (permiso==Convert.ToString(1))
+                    {
+                     
+                        principal.Show();
+                        
+                    }
+                    if (permiso==Convert.ToString(2))
+                    {
+                        principal.btnAgregarProfe.Visible = false;
+                       
+                        principal.Show();
+                        
+                    }
+                    if(permiso==Convert.ToString(3))
+                    {
+                        principal.btnAgregar.Visible = false;
+                        principal.btnAgregarAlum.Visible = false;
+                        principal.btnAgregarProfe.Visible = false;
+                        principal.btnEliminar.Visible = false;
+                        
+                        principal.Show();
+                        
+                    }
+                    
                 }
                 
             }
