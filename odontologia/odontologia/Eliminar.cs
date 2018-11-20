@@ -18,15 +18,18 @@ namespace odontologia
         string contras = "";
         string permiso = "";
 
-        public Configuracion()
+        public Configuracion(string usuario, string contra)
         {
             InitializeComponent();
             Form1 form1 = new Form1();
-           // llenartabla();
-            txtNumAcceso.Text = usuario.ToString().Trim();
-            txtContra.Text = contras.ToString().Trim();
+            // llenartabla();
+            this.usu = usuario;
+            this.contra = contra;
+            txtContra.Text = contra;
+            txtNumAcceso.Text = usu;
         }
-
+        string usu,contra;
+      
         private void btnCambioContra_Click(object sender, EventArgs e)
         {
             lblContra2.Visible = true;
@@ -87,10 +90,10 @@ namespace odontologia
              usuario = ds.Tables[0].Rows[0]["Usuario"].ToString().Trim();
              contras = ds.Tables[0].Rows[0]["Contrasena"].ToString().Trim();
              permiso = ds.Tables[0].Rows[0]["IdPermiso"].ToString().Trim();
-            Actualizar(usuario);
+            //Actualizar(usuario);
         }
 
-        public void Actualizar(string usuario)
+        public void Actualizar(string usu, string contra)
         {            
             string cmd = string.Format("Update InicioSecion set Contrasena ='{0}' where Usuario='{1}' ", txtCinfirmarContra.Text.Trim(),usuario.Trim());
             DataSet ds = Conec.Ejecutar(cmd);
@@ -101,6 +104,7 @@ namespace odontologia
         {
             if(txtContra2.Text==txtCinfirmarContra.Text)
             {
+                MessageBox.Show(co.Configuracion(usu,Convert.ToInt32(contra)));
                 
                llenartabla();
                txtContra.Text = contras.ToString().Trim();

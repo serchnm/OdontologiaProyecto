@@ -32,13 +32,18 @@
             this.lblAp = new MaterialSkin.Controls.MaterialLabel();
             this.lblAm = new MaterialSkin.Controls.MaterialLabel();
             this.lblNumAcceso = new MaterialSkin.Controls.MaterialLabel();
-            this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtApPat = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtApMat = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.txtNumAcceso = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnAceptar = new MaterialSkin.Controls.MaterialFlatButton();
             this.txtCarrera = new System.Windows.Forms.TextBox();
             this.txtPerrniso = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtApPat = new System.Windows.Forms.TextBox();
+            this.txtApMat = new System.Windows.Forms.TextBox();
+            this.txtNumAcceso = new System.Windows.Forms.TextBox();
+            this.txtNacceso = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblContra = new MaterialSkin.Controls.MaterialLabel();
+            this.btnAceptar2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -47,7 +52,7 @@
             this.lblNombre.Depth = 0;
             this.lblNombre.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNombre.Location = new System.Drawing.Point(121, 114);
+            this.lblNombre.Location = new System.Drawing.Point(51, 49);
             this.lblNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(63, 19);
@@ -60,7 +65,7 @@
             this.lblAp.Depth = 0;
             this.lblAp.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblAp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAp.Location = new System.Drawing.Point(121, 162);
+            this.lblAp.Location = new System.Drawing.Point(51, 97);
             this.lblAp.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblAp.Name = "lblAp";
             this.lblAp.Size = new System.Drawing.Size(120, 19);
@@ -73,7 +78,7 @@
             this.lblAm.Depth = 0;
             this.lblAm.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblAm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAm.Location = new System.Drawing.Point(121, 208);
+            this.lblAm.Location = new System.Drawing.Point(51, 143);
             this.lblAm.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblAm.Name = "lblAm";
             this.lblAm.Size = new System.Drawing.Size(124, 19);
@@ -86,97 +91,12 @@
             this.lblNumAcceso.Depth = 0;
             this.lblNumAcceso.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblNumAcceso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNumAcceso.Location = new System.Drawing.Point(121, 251);
+            this.lblNumAcceso.Location = new System.Drawing.Point(51, 186);
             this.lblNumAcceso.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblNumAcceso.Name = "lblNumAcceso";
             this.lblNumAcceso.Size = new System.Drawing.Size(136, 19);
             this.lblNumAcceso.TabIndex = 3;
             this.lblNumAcceso.Text = "Numero de acceso";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Depth = 0;
-            this.txtNombre.Hint = "";
-            this.txtNombre.Location = new System.Drawing.Point(321, 109);
-            this.txtNombre.MaxLength = 32767;
-            this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PasswordChar = '\0';
-            this.txtNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtNombre.SelectedText = "Nombre";
-            this.txtNombre.SelectionLength = 6;
-            this.txtNombre.SelectionStart = 0;
-            this.txtNombre.Size = new System.Drawing.Size(238, 23);
-            this.txtNombre.TabIndex = 4;
-            this.txtNombre.TabStop = false;
-            this.txtNombre.Text = "Nombre";
-            this.txtNombre.UseSystemPasswordChar = false;
-            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
-            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
-            // 
-            // txtApPat
-            // 
-            this.txtApPat.Depth = 0;
-            this.txtApPat.Hint = "";
-            this.txtApPat.Location = new System.Drawing.Point(321, 162);
-            this.txtApPat.MaxLength = 32767;
-            this.txtApPat.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtApPat.Name = "txtApPat";
-            this.txtApPat.PasswordChar = '\0';
-            this.txtApPat.SelectedText = "Apellido Paterno";
-            this.txtApPat.SelectionLength = 16;
-            this.txtApPat.SelectionStart = 0;
-            this.txtApPat.Size = new System.Drawing.Size(239, 23);
-            this.txtApPat.TabIndex = 5;
-            this.txtApPat.TabStop = false;
-            this.txtApPat.Text = "Apellido Paterno";
-            this.txtApPat.UseSystemPasswordChar = false;
-            this.txtApPat.Enter += new System.EventHandler(this.txtApPat_Enter);
-            this.txtApPat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApPat_KeyPress);
-            this.txtApPat.Leave += new System.EventHandler(this.txtApPat_Leave);
-            // 
-            // txtApMat
-            // 
-            this.txtApMat.Depth = 0;
-            this.txtApMat.Hint = "";
-            this.txtApMat.Location = new System.Drawing.Point(321, 208);
-            this.txtApMat.MaxLength = 32767;
-            this.txtApMat.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtApMat.Name = "txtApMat";
-            this.txtApMat.PasswordChar = '\0';
-            this.txtApMat.SelectedText = "Apellido Materno";
-            this.txtApMat.SelectionLength = 16;
-            this.txtApMat.SelectionStart = 0;
-            this.txtApMat.Size = new System.Drawing.Size(239, 23);
-            this.txtApMat.TabIndex = 6;
-            this.txtApMat.TabStop = false;
-            this.txtApMat.Text = "Apellido Materno";
-            this.txtApMat.UseSystemPasswordChar = false;
-            this.txtApMat.Enter += new System.EventHandler(this.txtApMat_Enter);
-            this.txtApMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApMat_KeyPress);
-            this.txtApMat.Leave += new System.EventHandler(this.txtApMat_Leave);
-            // 
-            // txtNumAcceso
-            // 
-            this.txtNumAcceso.Depth = 0;
-            this.txtNumAcceso.Hint = "";
-            this.txtNumAcceso.Location = new System.Drawing.Point(321, 257);
-            this.txtNumAcceso.MaxLength = 32767;
-            this.txtNumAcceso.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNumAcceso.Name = "txtNumAcceso";
-            this.txtNumAcceso.PasswordChar = '\0';
-            this.txtNumAcceso.SelectedText = "";
-            this.txtNumAcceso.SelectionLength = 0;
-            this.txtNumAcceso.SelectionStart = 0;
-            this.txtNumAcceso.Size = new System.Drawing.Size(239, 23);
-            this.txtNumAcceso.TabIndex = 7;
-            this.txtNumAcceso.TabStop = false;
-            this.txtNumAcceso.Text = "Numero de Control";
-            this.txtNumAcceso.UseSystemPasswordChar = false;
-            this.txtNumAcceso.Enter += new System.EventHandler(this.txtNumAcceso_Enter);
-            this.txtNumAcceso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumAcceso_KeyPress);
-            this.txtNumAcceso.Leave += new System.EventHandler(this.txtNumAcceso_Leave);
             // 
             // btnAceptar
             // 
@@ -184,7 +104,7 @@
             this.btnAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAceptar.Depth = 0;
             this.btnAceptar.Icon = null;
-            this.btnAceptar.Location = new System.Drawing.Point(321, 320);
+            this.btnAceptar.Location = new System.Drawing.Point(251, 256);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAceptar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAceptar.Name = "btnAceptar";
@@ -197,7 +117,7 @@
             // 
             // txtCarrera
             // 
-            this.txtCarrera.Location = new System.Drawing.Point(459, 335);
+            this.txtCarrera.Location = new System.Drawing.Point(679, 364);
             this.txtCarrera.Name = "txtCarrera";
             this.txtCarrera.Size = new System.Drawing.Size(100, 20);
             this.txtCarrera.TabIndex = 10;
@@ -206,12 +126,125 @@
             // 
             // txtPerrniso
             // 
-            this.txtPerrniso.Location = new System.Drawing.Point(459, 383);
+            this.txtPerrniso.Location = new System.Drawing.Point(679, 412);
             this.txtPerrniso.Name = "txtPerrniso";
             this.txtPerrniso.Size = new System.Drawing.Size(100, 20);
             this.txtPerrniso.TabIndex = 11;
             this.txtPerrniso.Text = "3";
             this.txtPerrniso.Visible = false;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(251, 44);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(238, 24);
+            this.txtNombre.TabIndex = 12;
+            this.txtNombre.Text = "Nombre";
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter_1);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress_1);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave_1);
+            // 
+            // txtApPat
+            // 
+            this.txtApPat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApPat.Location = new System.Drawing.Point(251, 92);
+            this.txtApPat.Name = "txtApPat";
+            this.txtApPat.Size = new System.Drawing.Size(238, 24);
+            this.txtApPat.TabIndex = 13;
+            this.txtApPat.Text = "Apellido Paterno";
+            this.txtApPat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtApPat.Enter += new System.EventHandler(this.txtApPat_Enter_1);
+            this.txtApPat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApPat_KeyPress_1);
+            this.txtApPat.Leave += new System.EventHandler(this.txtApPat_Leave_1);
+            // 
+            // txtApMat
+            // 
+            this.txtApMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApMat.Location = new System.Drawing.Point(251, 143);
+            this.txtApMat.Name = "txtApMat";
+            this.txtApMat.Size = new System.Drawing.Size(238, 24);
+            this.txtApMat.TabIndex = 14;
+            this.txtApMat.Text = "Apellido Materno";
+            this.txtApMat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtApMat.Enter += new System.EventHandler(this.txtApMat_Enter_1);
+            this.txtApMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApMat_KeyPress_1);
+            this.txtApMat.Leave += new System.EventHandler(this.txtApMat_Leave_1);
+            // 
+            // txtNumAcceso
+            // 
+            this.txtNumAcceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumAcceso.Location = new System.Drawing.Point(251, 186);
+            this.txtNumAcceso.Name = "txtNumAcceso";
+            this.txtNumAcceso.Size = new System.Drawing.Size(238, 24);
+            this.txtNumAcceso.TabIndex = 15;
+            this.txtNumAcceso.Text = "Número de Control";
+            this.txtNumAcceso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumAcceso.Enter += new System.EventHandler(this.txtNumAcceso_Enter_1);
+            this.txtNumAcceso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumAcceso_KeyPress_1);
+            this.txtNumAcceso.Leave += new System.EventHandler(this.txtNumAcceso_Leave_1);
+            // 
+            // txtNacceso
+            // 
+            this.txtNacceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNacceso.Location = new System.Drawing.Point(598, 256);
+            this.txtNacceso.Name = "txtNacceso";
+            this.txtNacceso.Size = new System.Drawing.Size(154, 24);
+            this.txtNacceso.TabIndex = 16;
+            this.txtNacceso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(598, 303);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(154, 24);
+            this.textBox2.TabIndex = 17;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(456, 259);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(136, 19);
+            this.materialLabel1.TabIndex = 18;
+            this.materialLabel1.Text = "Número de acceso";
+            // 
+            // lblContra
+            // 
+            this.lblContra.AutoSize = true;
+            this.lblContra.Depth = 0;
+            this.lblContra.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblContra.Location = new System.Drawing.Point(480, 306);
+            this.lblContra.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblContra.Name = "lblContra";
+            this.lblContra.Size = new System.Drawing.Size(86, 19);
+            this.lblContra.TabIndex = 19;
+            this.lblContra.Text = "Contraseña";
+            // 
+            // btnAceptar2
+            // 
+            this.btnAceptar2.AutoSize = true;
+            this.btnAceptar2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAceptar2.Depth = 0;
+            this.btnAceptar2.Icon = null;
+            this.btnAceptar2.Location = new System.Drawing.Point(640, 336);
+            this.btnAceptar2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAceptar2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAceptar2.Name = "btnAceptar2";
+            this.btnAceptar2.Primary = false;
+            this.btnAceptar2.Size = new System.Drawing.Size(82, 36);
+            this.btnAceptar2.TabIndex = 20;
+            this.btnAceptar2.Text = "Aceptar";
+            this.btnAceptar2.UseVisualStyleBackColor = true;
+            this.btnAceptar2.Click += new System.EventHandler(this.btnAceptar2_Click);
             // 
             // AgregarAlumno
             // 
@@ -219,13 +252,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtPerrniso);
-            this.Controls.Add(this.txtCarrera);
-            this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.btnAceptar2);
+            this.Controls.Add(this.lblContra);
+            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNacceso);
             this.Controls.Add(this.txtNumAcceso);
             this.Controls.Add(this.txtApMat);
             this.Controls.Add(this.txtApPat);
             this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtPerrniso);
+            this.Controls.Add(this.txtCarrera);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblNumAcceso);
             this.Controls.Add(this.lblAm);
             this.Controls.Add(this.lblAp);
@@ -244,12 +282,17 @@
         private MaterialSkin.Controls.MaterialLabel lblAp;
         private MaterialSkin.Controls.MaterialLabel lblAm;
         private MaterialSkin.Controls.MaterialLabel lblNumAcceso;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtNombre;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtApPat;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtApMat;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtNumAcceso;
         private MaterialSkin.Controls.MaterialFlatButton btnAceptar;
         private System.Windows.Forms.TextBox txtCarrera;
         private System.Windows.Forms.TextBox txtPerrniso;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtApPat;
+        private System.Windows.Forms.TextBox txtApMat;
+        private System.Windows.Forms.TextBox txtNumAcceso;
+        private System.Windows.Forms.TextBox txtNacceso;
+        private System.Windows.Forms.TextBox textBox2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel lblContra;
+        private MaterialSkin.Controls.MaterialFlatButton btnAceptar2;
     }
 }

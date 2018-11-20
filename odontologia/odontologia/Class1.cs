@@ -16,20 +16,7 @@ namespace Coneccion
         SqlCommand cmd;
         SqlDataReader dr;
 
-        //public Conexion( )
-        //{
-
-        //    try
-        //    {
-        //        con = new SqlConnection("Data Source=.;Initial Catalog=Odonto;Integrated Security=True");
-        //        con.Open();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("No se conecto correctamente con la base de datos: " + ex.ToString());
-        //    }
-
-        //}
+        
 
         public  String insertarAlumno(int IdAlumnon, string Nombre, string ApPat, string ApMat, int IdPersmiso, int IdCarrera)        
         {
@@ -64,15 +51,57 @@ namespace Coneccion
             return salida;
         }
 
-        //public String ActualizarContra (string NuevaContra)
-        //{
-        //    string salida = "Contraseña Actualiazda";
-        //    try
-        //    {
-        //        cmd = new SqlCommand("Update InicioSecion set Usuario=");
-        //    }
-        //}
+        public String Configuracion( string NContrasena, int Usuario )
+        {
+            string salida = "Contraseña actualizada";
+            try
+            {
+                cmd = new SqlCommand("update InicioSecion set Contrasena= '"+ NContrasena+"' where Usuario= "+Usuario+" ",con);
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                salida = "No se conecto: " + ex.ToString();
+            }
+            return salida;
+        }
 
+        public  String NuevoLoginAlumno(int Nacceso, string contra,int permiso)
+        {
+            string salida = "Login creado";
+            
+            try
+            {
+                con = new SqlConnection("Data Source=.;Initial Catalog=Odonto;Integrated Security=True");
+                con.Open();
+                cmd = new SqlCommand("insert into InicioSecion values (" + Nacceso+", '"+contra+"',"+permiso+")",con);
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                salida = "No se pudo crear contraseña para este usuario " + ex.ToString();
+            }
+            return salida;
+        }
+
+        public String  NuevoLoginDoc(int Nacceso, string contra, int permiso)
+        {
+            string salida = "Login creado";
+
+            try
+            {
+                con = new SqlConnection("Data Source=.;Initial Catalog=Odonto;Integrated Security=True");
+                con.Open();
+                cmd = new SqlCommand("insert into InicioSecion values (" + Nacceso + ", '" + contra + "'," + permiso + ")", con);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                salida = "No se pudo crear contraseña para este usuario " + ex.ToString();
+            }
+            return salida;
+        }
+       
         public static DataSet Ejecutar(string cmd)
         {
 

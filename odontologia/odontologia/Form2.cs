@@ -18,7 +18,7 @@ namespace odontologia
     public partial class MenuPrincipal : MaterialForm
     {
         Conec c = new Conec();
-        public MenuPrincipal()
+        public MenuPrincipal(string usuario, string contra)
         {
             InitializeComponent();
 
@@ -33,12 +33,14 @@ namespace odontologia
                 Primary.Green800, Accent.LightBlue200,
                 TextShade.WHITE
             );
-
+            this.usuario = usuario;
+            this.contra = contra;
         }
-
+        string usuario;
+        string contra;
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -88,7 +90,7 @@ namespace odontologia
             lblMprincipal.Text = "Configuracion";
             btnBuscar.Visible = false;
             txtBuscar.Visible = false;
-            NuevoForm(new Configuracion());
+            NuevoForm(new Configuracion(usuario,contra));
         }
         //Boton agregar
         private void button3_Click(object sender, EventArgs e)
@@ -120,7 +122,7 @@ namespace odontologia
             lblMprincipal.Text = "Agregar Profesor";
             btnBuscar.Visible = false;
             txtBuscar.Visible = false;
-            NuevoForm(new AgregarProfesor());
+            NuevoForm(new AgregarProfesor(usuario,contra));
             
 
         }

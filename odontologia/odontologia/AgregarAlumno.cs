@@ -91,39 +91,21 @@ namespace odontologia
                 txtNumAcceso.ForeColor = Color.Silver;
             }
         }
-        // Realizar bien la insercion
+        
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-           MessageBox.Show( co.insertarAlumno(Convert.ToInt32(txtNumAcceso.Text),txtNombre.Text,txtApPat.Text,txtApMat.Text,Convert.ToInt32(txtPerrniso.Text),Convert.ToInt32(txtCarrera.Text)));
+            MessageBox.Show( co.insertarAlumno(Convert.ToInt32(txtNumAcceso.Text),txtNombre.Text,txtApPat.Text,txtApMat.Text,Convert.ToInt32(txtPerrniso.Text),Convert.ToInt32(txtCarrera.Text)));
+            txtNacceso.Text = txtNumAcceso.Text;
             txtNumAcceso.Text = "";
             txtNombre.Text = "";
             txtApPat.Text = "";
             txtApMat.Text = "";
-           
-
-            //try
-            //{
-            //string cmd = string.Format("Insert into Alumno values  where IdAlumno ='{0}' and Contrasena='{1}'", noalumno.Text.Trim(), contrasena.Text.Trim());
-            //string cmd=string.Format ("insert into Alumno (IdAlumno,Nombre,ApPat,ApMat,IdPermiso,IdCarrera) values(" + txtNumAcceso.Text + ",'" + txtNombre.Text + "','" + txtApPat.Text + "','" + txtApMat.Text + "','"+txtPerrniso
-            //       +"',3) ");
-            //    DataSet ds = Conec.Ejecutar(cmd);
-                //string usuario = ds.Tables[0].Rows[0]["Usuario"].ToString().Trim();
-                //string contras = ds.Tables[0].Rows[0]["Contrasena"].ToString().Trim();
-
-            //    if (usuario == noalumno.Text.ToString() && contras == contrasena.Text.Trim())
-            //    {
-            //        this.Hide();
-            //        MenuPrincipal principal = new MenuPrincipal();
-            //        principal.Show();
-            //    }
-
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Usuario o contraseña incorrecta");
-            //    noalumno.Clear();
-            //    contrasena.Clear();
-            //}
+            materialLabel1.Visible = true;
+            lblContra.Visible = true;
+            txtNacceso.Visible = true;
+            textBox2.Visible = true;
+            
+            btnAceptar2.Visible = true;        
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -144,6 +126,103 @@ namespace odontologia
         private void txtNumAcceso_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validar.SoloLetras(e);
+        }
+
+        private void txtNombre_Leave_1(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "")
+            {
+                txtNombre.Text = "Nombre";
+                txtNombre.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtNombre_Enter_1(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "Nombre")
+            {
+                txtNombre.Text = "";
+                txtNombre.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtNombre_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
+
+        private void txtApPat_Leave_1(object sender, EventArgs e)
+        {
+            if (txtApPat.Text == "")
+            {
+                txtApPat.Text = "Apellido Paterno";
+                txtApPat.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtApPat_Enter_1(object sender, EventArgs e)
+        {
+            if (txtApPat.Text == "Apellido Paterno")
+            {
+                txtApPat.Text = "";
+                txtApPat.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtApPat_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
+
+        private void txtApMat_Leave_1(object sender, EventArgs e)
+        {
+            if (txtApMat.Text == "")
+            {
+                txtApMat.Text = "Apellido Materno";
+                txtApMat.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtApMat_Enter_1(object sender, EventArgs e)
+        {
+            if (txtApMat.Text == "Apellido Materno")
+            {
+                txtApMat.Text = "";
+                txtApMat.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtApMat_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloLetras(e);
+        }
+
+        private void txtNumAcceso_Leave_1(object sender, EventArgs e)
+        {
+            if (txtNumAcceso.Text == "")
+            {
+                txtNumAcceso.Text = "Número de Control";
+                txtNumAcceso.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtNumAcceso_Enter_1(object sender, EventArgs e)
+        {
+            if(txtNumAcceso.Text=="Número de Control")
+            {
+                txtNumAcceso.Text = "";
+                txtNumAcceso.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtNumAcceso_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Validar.SoloNumeros(e);
+        }
+
+        private void btnAceptar2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(co.NuevoLoginAlumno(Convert.ToInt32(txtNacceso.Text),textBox2.Text,Convert.ToInt32(txtPerrniso.Text)));
         }
     }
 }

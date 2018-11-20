@@ -68,6 +68,7 @@
             // 
             // txtNumAcceso
             // 
+            this.txtNumAcceso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumAcceso.Location = new System.Drawing.Point(212, 96);
             this.txtNumAcceso.Multiline = true;
             this.txtNumAcceso.Name = "txtNumAcceso";
@@ -77,6 +78,7 @@
             // 
             // txtContra
             // 
+            this.txtContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContra.Location = new System.Drawing.Point(212, 147);
             this.txtContra.Multiline = true;
             this.txtContra.Name = "txtContra";

@@ -68,7 +68,7 @@ namespace odontologia
                 if (usuario == noalumno.Text.ToString() && contras == contrasena.Text.Trim())
                 {
                     this.Hide();
-                    MenuPrincipal principal = new MenuPrincipal();
+                    MenuPrincipal principal = new MenuPrincipal(usuario, contras);
                     if (permiso==Convert.ToString(1))
                     {
                      
