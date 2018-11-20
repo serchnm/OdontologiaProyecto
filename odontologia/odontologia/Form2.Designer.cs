@@ -35,12 +35,12 @@
             this.lblMprincipal = new MaterialSkin.Controls.MaterialLabel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.pdfreader = new AxAcroPDFLib.AxAcroPDF();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAgregarAlum = new System.Windows.Forms.Button();
-            this.btnAgregarProfe = new System.Windows.Forms.Button();
             this.ImgHome = new System.Windows.Forms.PictureBox();
+            this.btnAgregarProfe = new System.Windows.Forms.Button();
+            this.btnAgregarAlum = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pdfreader)).BeginInit();
@@ -102,12 +102,12 @@
             this.lblMprincipal.AutoSize = true;
             this.lblMprincipal.BackColor = System.Drawing.Color.Transparent;
             this.lblMprincipal.Depth = 0;
-            this.lblMprincipal.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMprincipal.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblMprincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblMprincipal.Location = new System.Drawing.Point(569, 31);
             this.lblMprincipal.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblMprincipal.Name = "lblMprincipal";
-            this.lblMprincipal.Size = new System.Drawing.Size(129, 25);
+            this.lblMprincipal.Size = new System.Drawing.Size(107, 19);
             this.lblMprincipal.TabIndex = 15;
             this.lblMprincipal.Text = "Menu principal";
             // 
@@ -128,6 +128,17 @@
             this.panel1.Size = new System.Drawing.Size(914, 527);
             this.panel1.TabIndex = 19;
             // 
+            // pdfreader
+            // 
+            this.pdfreader.Enabled = true;
+            this.pdfreader.Location = new System.Drawing.Point(0, 368);
+            this.pdfreader.Name = "pdfreader";
+            this.pdfreader.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfreader.OcxState")));
+            this.pdfreader.Size = new System.Drawing.Size(911, 156);
+            this.pdfreader.TabIndex = 0;
+            this.pdfreader.Visible = false;
+            this.pdfreader.Enter += new System.EventHandler(this.pdfreader_Enter);
+            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -144,16 +155,6 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // pdfreader
-            // 
-            this.pdfreader.Enabled = true;
-            this.pdfreader.Location = new System.Drawing.Point(3, 0);
-            this.pdfreader.Name = "pdfreader";
-            this.pdfreader.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdfreader.OcxState")));
-            this.pdfreader.Size = new System.Drawing.Size(908, 524);
-            this.pdfreader.TabIndex = 0;
-            this.pdfreader.Visible = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
@@ -168,21 +169,16 @@
             this.panel2.Size = new System.Drawing.Size(200, 629);
             this.panel2.TabIndex = 20;
             // 
-            // btnAgregarAlum
+            // ImgHome
             // 
-            this.btnAgregarAlum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.btnAgregarAlum.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAgregarAlum.FlatAppearance.BorderSize = 0;
-            this.btnAgregarAlum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
-            this.btnAgregarAlum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarAlum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarAlum.Location = new System.Drawing.Point(0, 236);
-            this.btnAgregarAlum.Name = "btnAgregarAlum";
-            this.btnAgregarAlum.Size = new System.Drawing.Size(197, 55);
-            this.btnAgregarAlum.TabIndex = 15;
-            this.btnAgregarAlum.Text = "AGREGAR ALUMNO";
-            this.btnAgregarAlum.UseVisualStyleBackColor = false;
-            this.btnAgregarAlum.Click += new System.EventHandler(this.btnAgregarAlum_Click);
+            this.ImgHome.Image = global::odontologia.Properties.Resources.UABC_escudo;
+            this.ImgHome.Location = new System.Drawing.Point(0, 3);
+            this.ImgHome.Name = "ImgHome";
+            this.ImgHome.Size = new System.Drawing.Size(197, 113);
+            this.ImgHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgHome.TabIndex = 17;
+            this.ImgHome.TabStop = false;
+            this.ImgHome.Click += new System.EventHandler(this.ImgHome_Click);
             // 
             // btnAgregarProfe
             // 
@@ -200,16 +196,21 @@
             this.btnAgregarProfe.UseVisualStyleBackColor = false;
             this.btnAgregarProfe.Click += new System.EventHandler(this.btnAgregarProfe_Click);
             // 
-            // ImgHome
+            // btnAgregarAlum
             // 
-            this.ImgHome.Image = global::odontologia.Properties.Resources.UABC_escudo;
-            this.ImgHome.Location = new System.Drawing.Point(0, 3);
-            this.ImgHome.Name = "ImgHome";
-            this.ImgHome.Size = new System.Drawing.Size(197, 113);
-            this.ImgHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ImgHome.TabIndex = 17;
-            this.ImgHome.TabStop = false;
-            this.ImgHome.Click += new System.EventHandler(this.ImgHome_Click);
+            this.btnAgregarAlum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.btnAgregarAlum.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAgregarAlum.FlatAppearance.BorderSize = 0;
+            this.btnAgregarAlum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(142)))), ((int)(((byte)(60)))));
+            this.btnAgregarAlum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarAlum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarAlum.Location = new System.Drawing.Point(0, 236);
+            this.btnAgregarAlum.Name = "btnAgregarAlum";
+            this.btnAgregarAlum.Size = new System.Drawing.Size(197, 55);
+            this.btnAgregarAlum.TabIndex = 15;
+            this.btnAgregarAlum.Text = "AGREGAR ALUMNO";
+            this.btnAgregarAlum.UseVisualStyleBackColor = false;
+            this.btnAgregarAlum.Click += new System.EventHandler(this.btnAgregarAlum_Click);
             // 
             // pictureBox2
             // 

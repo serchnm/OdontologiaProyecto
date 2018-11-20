@@ -128,5 +128,12 @@ namespace odontologia
         {
             Validar.SoloNumeros(e);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3 principal = new Form3();
+            principal.Show();
+        }
     }
 }

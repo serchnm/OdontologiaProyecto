@@ -129,5 +129,10 @@ namespace odontologia
             txtBuscar.Visible = false;
             NuevoForm(new AgregarAlumno());
         }
+
+        private void pdfreader_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
