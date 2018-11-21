@@ -40,6 +40,7 @@ namespace Coneccion
             string salida = "Doctor registrado correctamente";
             try
             {
+
                 cmd = new SqlCommand("insert into Doctor (IdDoctor, Nombre, ApPat, ApMat, IdPermiso,IdCarrera) values (" + IdDoctor + ",'" + Nombre + "','" + ApPat + "','" + ApMat + "'," + IdPersmiso + "," + IdCarrera + " )", con);
                 cmd.ExecuteNonQuery();
             }

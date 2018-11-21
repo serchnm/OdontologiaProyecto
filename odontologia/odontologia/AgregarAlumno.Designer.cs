@@ -193,6 +193,7 @@
             this.txtNacceso.Size = new System.Drawing.Size(154, 24);
             this.txtNacceso.TabIndex = 16;
             this.txtNacceso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNacceso.Visible = false;
             // 
             // textBox2
             // 
@@ -202,6 +203,7 @@
             this.textBox2.Size = new System.Drawing.Size(154, 24);
             this.textBox2.TabIndex = 17;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.Visible = false;
             // 
             // materialLabel1
             // 
@@ -215,6 +217,7 @@
             this.materialLabel1.Size = new System.Drawing.Size(136, 19);
             this.materialLabel1.TabIndex = 18;
             this.materialLabel1.Text = "Número de acceso";
+            this.materialLabel1.Visible = false;
             // 
             // lblContra
             // 
@@ -228,6 +231,7 @@
             this.lblContra.Size = new System.Drawing.Size(86, 19);
             this.lblContra.TabIndex = 19;
             this.lblContra.Text = "Contraseña";
+            this.lblContra.Visible = false;
             // 
             // btnAceptar2
             // 
@@ -244,6 +248,7 @@
             this.btnAceptar2.TabIndex = 20;
             this.btnAceptar2.Text = "Aceptar";
             this.btnAceptar2.UseVisualStyleBackColor = true;
+            this.btnAceptar2.Visible = false;
             this.btnAceptar2.Click += new System.EventHandler(this.btnAceptar2_Click);
             // 
             // AgregarAlumno

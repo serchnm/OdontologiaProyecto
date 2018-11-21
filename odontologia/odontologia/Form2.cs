@@ -52,25 +52,25 @@ namespace odontologia
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 
-                string cmd = string.Format("select *from Dcumento where NumDocumento ='{0}'", txtBuscar.Text.Trim());
-                DataSet ds = Conec.Ejecutar(cmd);
-                string Doc = ds.Tables[0].Rows[0]["NumDocumento"].ToString().Trim();
+            //    string cmd = string.Format("select *from Dcumento where NumDocumento ='{0}'", txtBuscar.Text.Trim());
+            //    DataSet ds = Conec.Ejecutar(cmd);
+            //    string Doc = ds.Tables[0].Rows[0]["NumDocumento"].ToString().Trim();
                 
 
-                if (Doc == txtBuscar.Text.ToString())
-                {
-                    pdfreader.Visible = true;
-                }
+            //    if (Doc == txtBuscar.Text.ToString())
+            //    {
+            //        pdfreader.Visible = true;
+            //    }
 
-            }
-            catch
-            {
-                MessageBox.Show("Archivo no encontrado ");
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Archivo no encontrado ");
                
-            }
+            //}
         }
         private void NuevoForm(object FormNuevo)
         {
@@ -88,30 +88,31 @@ namespace odontologia
         private void button4_Click(object sender, EventArgs e)
         {
             lblMprincipal.Text = "Configuracion";
-            btnBuscar.Visible = false;
-            txtBuscar.Visible = false;
+            //btnBuscar.Visible = false;
+            //txtBuscar.Visible = false;
             NuevoForm(new Configuracion(usuario,contra));
         }
         //Boton agregar
         private void button3_Click(object sender, EventArgs e)
         {
             lblMprincipal.Text = "Agregar Archivo";
-            btnBuscar.Visible = true;
-            txtBuscar.Visible = true;
+            //btnBuscar.Visible = true;
+            //txtBuscar.Visible = true;
+            NuevoForm(new PDF());
         }
         //Boton eliminar
         private void button2_Click(object sender, EventArgs e)
         {
             lblMprincipal.Text = "Eliminar Archivo";
-            btnBuscar.Visible = true;
-            txtBuscar.Visible = true;
+            //btnBuscar.Visible = true;
+            //txtBuscar.Visible = true;
         }
         //Imagen de inicio
         private void ImgHome_Click(object sender, EventArgs e)
         {
             
-            btnBuscar.Visible = false;
-            txtBuscar.Visible = false;
+            //btnBuscar.Visible = false;
+            //txtBuscar.Visible = false;
             NuevoForm(new Home());
             lblMprincipal.Text = "UABC";
             
@@ -120,8 +121,8 @@ namespace odontologia
         private void btnAgregarProfe_Click(object sender, EventArgs e)
         {
             lblMprincipal.Text = "Agregar Profesor";
-            btnBuscar.Visible = false;
-            txtBuscar.Visible = false;
+            //btnBuscar.Visible = false;
+            //txtBuscar.Visible = false;
             NuevoForm(new AgregarProfesor(usuario,contra));
             
 
@@ -130,8 +131,8 @@ namespace odontologia
         private void btnAgregarAlum_Click(object sender, EventArgs e)
         {
             lblMprincipal.Text = "Agregar Alumno";
-            btnBuscar.Visible = false;
-            txtBuscar.Visible = false;
+            //btnBuscar.Visible = false;
+            //txtBuscar.Visible = false;
             NuevoForm(new AgregarAlumno());
             //NuevoForm(new MenuPrincipal());
         }

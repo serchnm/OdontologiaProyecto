@@ -87,7 +87,7 @@ namespace odontologia
                         principal.btnAgregar.Visible = false;
                         principal.btnAgregarAlum.Visible = false;
                         principal.btnAgregarProfe.Visible = false;
-                        principal.btnEliminar.Visible = false;
+                       // principal.btnEliminar.Visible = false;
                         
                         principal.Show();
                         
